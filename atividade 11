@@ -1,0 +1,52 @@
+package vetor;
+
+import java.util.Scanner;
+
+public class a11 {
+
+	public static void main(String[] args) {
+	
+		Scanner ler = new Scanner (System.in);
+		
+		int TAM=10;
+		int a[], x, v=0, i;
+		
+		a = new int[TAM];
+		
+	// leitura vetor A
+		
+		for(i=0 ; i<TAM ; i++) {
+			System.out.println("digite o "+(i+1)+ " valor do vetor A: ");
+			a[i] = ler.nextInt();
+		}
+		
+		// leitura de x
+		
+		System.out.println("digite o valor que deseja buscar: ");
+		x = ler.nextInt();
+		
+		// verificação de x
+
+		for(i=0 ; i<TAM ; i++) {
+		
+			if (x == a[i]) {
+			
+				System.out.println("O valor digitado está armazenado na posição " +(i+1)+ " do vetor.");
+				v = 1;
+		
+			}
+		
+		} 
+		
+		
+		if (v == 0) {
+			
+			System.out.println("O valor digitado não está armazenado em nenhuma posição do vetor.");
+	
+		}
+	
+			
+ler.close();
+		
+	}
+}
