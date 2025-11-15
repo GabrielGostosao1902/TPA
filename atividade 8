@@ -1,0 +1,51 @@
+package vetor;
+
+import java.util.Scanner;
+
+public class a8 {
+
+	public static void main(String[] args) {
+	
+		Scanner ler = new Scanner (System.in);
+		
+		int TAM=10;
+		int a[], b[], i, v, r;
+		
+		a = new int[TAM];
+		b = new int[TAM];
+		
+	// leitura vetor A
+		
+		for(i=0 ; i<TAM ; i++) {
+			System.out.println("digite o "+(i+1)+ " valor do vetor A");
+			a[i] = ler.nextInt();
+		}
+		
+		for(i=0 ; i<TAM ; i++) {
+			
+			r = a[i];
+			
+			for(v=0 ; v<10 ; v++) {
+				
+				r = r + (r-1);
+				
+			}
+			
+		b[i] = r;
+			
+		}
+		
+		// apresentação do vetor b
+		
+				System.out.println("somatoria dos elementos do vetor a:");
+				
+				for(i=0 ; i<TAM ; i++) {
+					
+						System.out.println (a[i] + "= " + b[i]);
+					
+				}
+		
+ler.close();
+		
+	}
+}
