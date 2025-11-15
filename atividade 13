@@ -1,0 +1,72 @@
+package vetor;
+
+import java.util.Scanner;
+
+public class a13 {
+
+	public static void main(String[] args) {
+	
+		Scanner ler = new Scanner (System.in);
+		
+		int TAM=10;
+		int a[], i;
+		
+		a = new int[TAM];
+		
+	// leitura vetor A
+		
+		for(i=0 ; i<TAM ; i++) {
+			System.out.println("digite o "+(i+1)+ " valor do número: ");
+			a[i] = ler.nextInt();
+		}
+		
+		// apresentação do vetor
+		
+				System.out.print("Número digitado: ");
+				
+				for(i=0 ; i<TAM ; i++) {
+					
+						System.out.print(a[i]);
+					
+				}
+				
+				System.out.println(" ");
+				
+		// verificação palíndromo
+				
+		if (a[0] == a[9]) {
+			
+			if (a[1] == a[8]) {
+				
+				if (a[2] == a[7]) {
+					
+					if (a[3] == a[6]) {
+						
+						if (a[4] == a[5]) {
+							
+								System.out.println("O número digitado é um palíndromo.");
+							
+						}else{
+							System.out.println("O número digitado não é um palíndromo.");
+						}
+						
+					}else{
+						System.out.println("O número digitado não é um palíndromo.");
+					}
+					
+				}else{
+					System.out.println("O número digitado não é um palíndromo.");
+				}
+				
+			}else{
+				System.out.println("O número digitado não é um palíndromo.");
+			}
+			
+		}else{
+			System.out.println("O número digitado não é um palíndromo.");
+		}
+		
+ler.close();
+		
+	}
+}
