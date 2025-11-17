@@ -1,0 +1,95 @@
+package vetor;
+
+import java.util.Scanner;
+
+public class a12 {
+
+	public static void main(String[] args) {
+	
+		Scanner ler = new Scanner (System.in);
+		
+		int TAM=10;
+		int a[], x=0, senha, senhaEncontrada, i, i2;
+		
+		a = new int[TAM];
+		
+	// atribuição das senhas no vetor A
+		
+		for(i=0 ; i<TAM ; i++) {
+			
+			System.out.print(+(i+1)+ "º senha: ");
+			a[i] = (int)(Math.random()*100);
+			
+	// proteção caso a senha sorteada seja igual a 0 (encerramento do programa)
+			
+				if (a[i] == 0) {
+					
+					a[i] = 1;
+					
+				}
+			
+			System.out.println(a[i]);
+			
+		}
+		
+	// leitura da senha
+			
+		System.out.println("verifique sua senha, digite 0 para o programa parar.");
+		
+		for(i=0; ;i++) {
+			
+			senhaEncontrada=0;
+			
+			System.out.println("digite sua senha: ");
+			senha = ler.nextInt();
+			
+	// verificação da senha
+			
+			if(senha != 0) {
+			
+				for(i2=0 ; i2<TAM ; i2++) {
+					
+					if (senha == a[i2]) {
+						
+						senhaEncontrada=1;
+						
+					System.out.println("senha encontrada!");
+					System.out.print("situação: ");
+						
+						if (x == 0) {
+							
+							System.out.println("lanche liberado");
+							x = 1;
+							
+						}else{
+							
+							System.out.println("lanche não liberado");
+							
+						}
+						
+					}else if (i2 == (TAM-1)) {
+						
+						if (senhaEncontrada == 0) {
+							
+						System.out.println("senha não encontrada.");
+
+						}
+						
+					}
+					
+				}
+
+	// caso a senha digitada seja igual a 0:
+				
+			}else{
+				
+				break;
+				
+			}
+		
+		}
+				
+ler.close();
+		
+	}
+}
